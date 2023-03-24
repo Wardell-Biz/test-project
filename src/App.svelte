@@ -1,16 +1,19 @@
 <script>
-	// import Component1 from './Component1.svelte';
-	// import Component2 from './Component2.svelte';
+	// import Component1 from "./Component1.svelte";
+	// import Component2 from "./Component2.svelte";
+	import Table from "./components/Table.svelte";
+	import { data, columns } from "./constants/Dumpy_Data";
 
-	export let name;
+	// export let name;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<!-- <h1>Hello {name}!</h1> -->
 
 	<!-- <Component1 /> -->
 	<!-- <Component2 /> -->
 </main>
+<Table {data} {columns} />
 
 <style>
 	main {
