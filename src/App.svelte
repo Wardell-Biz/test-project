@@ -1,25 +1,13 @@
 <script>
 	// import Component1 from './Component1.svelte';
-	// import Component2 from './Component2.svelte';
-	import Table from "./Table.svelte";
+	import Component3 from './Component3.svelte';
 	export let name;
-
-	const data = [
-    { id: 1, name: 'Load balancer 1', protocol: 'HTTP', port: 300, rule: 'Round Robin', attached_group: 'VM Groups', status: 'Starting' },
-    { id: 2, name: 'Load balancer 2', protocol: 'HTTPS', port: 443, rule: 'Least Connections', attached_group: 'Container Groups', status: 'Running' },
-    { id: 3, name: 'Load balancer 3', protocol: 'TCP', port: 8080, rule: 'Source IP Hash', attached_group: 'VM Groups', status: 'Stopping' },
-    { id: 4, name: 'Load balancer 4', protocol: 'HTTP', port: 80, rule: 'Least Connections', attached_group: 'Container Groups', status: 'Stopped' },
-    { id: 5, name: 'Load balancer 5', protocol: 'TCP', port: 3306, rule: 'Round Robin', attached_group: 'Database Servers', status: 'Error' },
-  ];
-
-  const header = ['ID', 'Name', 'Protocol', 'Port', 'Rule', 'Attached Group', 'Status', ''];
-
 
 </script>
 
 <main>
 	<div class="table-container px-10">
-		<Table rows={data} header={header} />
+		<Component3 />
 	</div>
 </main>
 
