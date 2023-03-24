@@ -11,8 +11,46 @@
     { id: 5, name: 'Load balancer 5', protocol: 'TCP', port: 3306, rule: 'Round Robin', attached_group: 'Database Servers', status: 'Error' },
   ];
 
+  const data2 = [{
+      id: 6,
+      name: 'Load balancer 6',
+      protocol: 'HTTPS',
+      port: 8443,
+      rule: 'Round Robin',
+      attached_group: 'VM Groups',
+      status: 'Running'
+    },
+    {
+      id: 7,
+      name: 'Load balancer 7',
+      protocol: 'HTTP',
+      port: 8081,
+      rule: 'Least Sessions',
+      attached_group: 'Database Servers',
+      status: 'Stopped'
+    }
+  ]
+
   const header = ['ID', 'Name', 'Protocol', 'Port', 'Rule', 'Attached Group', 'Status', ''];
 
 </script>
 
-<Table rows={data} {header} />
+<div class="flex gap-2 w-full">
+  <Table rows={data} {header} />
+
+  <!-- <Table rows={data2} {header} /> -->
+</div>
+
+<style>
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .gap-2{
+    gap: 1rem;
+  }
+
+  .w-full{
+    width: 100%;
+  }
+</style>
