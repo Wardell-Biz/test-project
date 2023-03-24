@@ -12,7 +12,7 @@
     { id: 5, name: 'Load balancer 5', protocol: 'TCP', port: 3306, rule: 'Round Robin', attached_group: 'Database Servers', status: 'Error' },
   ];
 
-  const header = ['ID', 'Name', 'Protocol', 'Port', 'Rule', 'Attached Group', 'Status'];
+  const header = ['ID', 'Name', 'Protocol', 'Port', 'Rule', 'Attached Group', 'Status', ''];
 
 
 </script>

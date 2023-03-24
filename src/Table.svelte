@@ -17,6 +17,10 @@
         {#each Object.values(row) as value}
           <td>{value}</td>
         {/each}
+        <td>
+          <button class="button edit-button">Edit</button>
+          <button class="button delete-button">Delete</button>
+        </td>
       </tr>
     {/each}
   </tbody>
@@ -46,4 +50,25 @@
   /* tr:nth-child(even) {
     background-color: #f9f9f9;
   } */
+
+  .button{
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .edit-button {
+    background-color: #4CAF50;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+  }
+
 </style>
