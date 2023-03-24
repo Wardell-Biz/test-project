@@ -36,7 +36,7 @@
   th {
     background-color: #cfcccc;
     font-weight: bold;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
   }
   
@@ -56,11 +56,7 @@
     border-radius: 3px;
     color: white;
     padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
     cursor: pointer;
   }
   .edit-button {
