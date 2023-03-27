@@ -1,12 +1,14 @@
 <script>
   export let rows = [];
-  export let header = [];
+  export let columns = {};
+  const headers = Object.values(columns);
+  
 </script>
 
 <table>
   <thead>
     <tr>
-      {#each header as column}
+      {#each headers as column}
         <th>{column}</th>
       {/each}
     </tr>
@@ -14,13 +16,16 @@
   <tbody>
     {#each rows as row}
       <tr>
-        {#each Object.values(row) as value}
-          <td>{value}</td>
+        {#each Object.keys(columns) as key}
+          {#if key == 'action'}
+          <td>
+            <button class="button edit-button">Edit</button>
+            <button class="button delete-button">Delete</button>
+          </td> 
+          {:else}    
+          <td>{row[key] || '' }</td>
+          {/if}
         {/each}
-        <td>
-          <button class="button edit-button">Edit</button>
-          <button class="button delete-button">Delete</button>
-        </td>
       </tr>
     {/each}
   </tbody>

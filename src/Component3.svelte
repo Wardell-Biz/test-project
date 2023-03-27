@@ -31,12 +31,12 @@
     }
   ]
 
-  const header = ['ID', 'Name', 'Protocol', 'Port', 'Rule', 'Attached Group', 'Status', ''];
+  const columns = {id: 'ID',name: 'Name',protocol: 'Protocol',port: 'Port',rule: 'Rule',attached_group: 'Attached Group',status: 'Status', 'action': 'Action'};
 
 </script>
 
 <div class="flex gap-2 w-full">
-  <Table rows={data} {header} />
+  <Table rows={data} {columns} />
 
   <!-- <Table rows={data2} {header} /> -->
 </div>
