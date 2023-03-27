@@ -1,4 +1,5 @@
 <script>
+    import { Styles } from 'sveltestrap';
     import Table from './Table.svelte'
 
     let posts = [];
@@ -78,9 +79,10 @@
         posts = p;
         isLoaded = true;
     })()
-
-
 </script>
+
+
+<Styles />
 
 <main>
     {#if (isLoaded)}
