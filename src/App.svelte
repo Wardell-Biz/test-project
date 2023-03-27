@@ -82,12 +82,12 @@
 <main>
     <Table rows={balancers} title="Balancers"/>
 
-    {#if (posts.length)}
+    <!--{#if (posts.length)}-->
         <Table rows={posts} title="Table 1"/>
-    {/if}
-    {#if (todos.length)}
+    <!--{/if}-->
+    <!--{#if (todos.length)}-->
         <Table rows={todos} title="Table 2"/>
-    {/if}
+    <!--{/if}-->
 </main>
 
 <style>

@@ -1,27 +1,33 @@
 <div>
     <h2>{title}</h2>
-    <table>
-        <thead>
-        <tr>
-            {#each headers as header}
-                <th>
-                    {header}
-                </th>
-            {/each}
-
-        </tr>
-        </thead>
-        <tbody>
-        {#each rows as row}
+    {#if (rows.length)}
+        <table>
+            <thead>
             <tr>
-                {#each Object.entries(row) as [name, value]}
-                    <td>{value}</td>
+                {#each headers as header}
+                    <th>
+                        {header}
+                    </th>
                 {/each}
-            </tr>
-        {/each}
-        </tbody>
 
-    </table>
+            </tr>
+            </thead>
+            <tbody>
+            {#each rows as row}
+                <tr>
+                    {#each Object.entries(row) as [name, value]}
+                        <td>{value}</td>
+                    {/each}
+                </tr>
+            {/each}
+            </tbody>
+
+        </table>
+    {:else }
+        <div>
+            Empty data!
+        </div>
+    {/if}
 
 </div>
 
