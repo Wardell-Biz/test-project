@@ -6,6 +6,9 @@
   export let columns = {};
   const headers = Object.values(columns);
 
+  // COLUMNS prop is useful when needed to filter of viewing data. 
+  // like we won't to show id, created_at, modified_at, password, these kind of fields
+  
   const dispatch = new createEventDispatcher();
 
 </script>
