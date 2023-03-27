@@ -64,6 +64,8 @@
         }
     ];
 
+    let isLoaded = false;
+
     (async () => {
         const [tR, pR] = await Promise.all(
             [
@@ -74,15 +76,22 @@
         const p = await pR.json()
         todos = t;
         posts = p;
+        isLoaded = true;
     })()
 
 
 </script>
 
 <main>
-    <Table rows={balancers} title="Balancers"/>
-    <Table rows={posts} title="Table 1"/>
-    <Table rows={todos} title="Table 2"/>
+    {#if (isLoaded)}
+        <Table rows={balancers} title="Balancers"/>
+        <Table rows={posts} title="Table 1"/>
+        <Table rows={todos} title="Table 2"/>
+    {:else }
+        <div>
+            Loading...
+        </div>
+    {/if}
 </main>
 
 <style>
