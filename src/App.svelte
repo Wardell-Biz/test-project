@@ -1,15 +1,14 @@
 <script>
 	// import Component1 from './Component1.svelte';
-	// import Component2 from './Component2.svelte';
-
+	import Component3 from './Component3.svelte';
 	export let name;
+
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-
-	<!-- <Component1 /> -->
-	<!-- <Component2 /> -->
+	<div class="table-container px-10">
+		<Component3 />
+	</div>
 </main>
 
 <style>
@@ -31,5 +30,15 @@
 		main {
 			max-width: none;
 		}
+	}
+
+	.table-container {
+    display: flex;
+    justify-content: center;
+  }
+
+	.px-10{
+		padding-left: 5rem;
+		padding-right: 5rem;
 	}
 </style>
