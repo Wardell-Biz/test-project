@@ -1,8 +1,13 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+
   export let rows = [];
   export let columns = {};
   const headers = Object.values(columns);
-  
+
+  const dispatch = new createEventDispatcher();
+
 </script>
 
 <table>
@@ -19,8 +24,8 @@
         {#each Object.keys(columns) as key}
           {#if key == 'action'}
           <td>
-            <button class="button edit-button">Edit</button>
-            <button class="button delete-button">Delete</button>
+            <button class="button edit-button" on:click={() => dispatch('edit', row)}>Edit</button>
+            <button class="button delete-button" on:click={() => dispatch('delete', row)}>Delete</button>
           </td> 
           {:else}    
           <td>{row[key] || '' }</td>

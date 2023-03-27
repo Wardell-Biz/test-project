@@ -33,10 +33,19 @@
 
   const columns = {id: 'ID',name: 'Name',protocol: 'Protocol',port: 'Port',rule: 'Rule',attached_group: 'Attached Group',status: 'Status', 'action': 'Action'};
 
+    const handleEdit = (e) => {
+      console.log(e.detail)
+      // implementation of edit function
+    }
+
+    const handleDelete = (e) => {
+      console.log(e.detail)
+      // implementation of delete function
+    }
 </script>
 
 <div class="flex gap-2 w-full">
-  <Table rows={data} {columns} />
+  <Table rows={data} {columns} on:edit={(e) => handleEdit(e)} on:delete={(e) => handleDelete(e)} />
 
   <!-- <Table rows={data2} {header} /> -->
 </div>
