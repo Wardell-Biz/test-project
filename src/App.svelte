@@ -2,12 +2,14 @@
 	// import Component1 from './Component1.svelte';
 	// import Component2 from './Component2.svelte';
 
+	import Main from './pages/Main.svelte'
+
 	export let name;
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-
+	<Main />
 	<!-- <Component1 /> -->
 	<!-- <Component2 /> -->
 </main>
